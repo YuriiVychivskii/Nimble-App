@@ -19,8 +19,11 @@ export default function ToggleTheme() {
   return (
     <Button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      variant="outlineRounded"
-      className={cn('flex w-20 px-1', theme === 'dark' ? 'justify-start' : 'justify-end')}
+      variant="outline"
+      className={cn(
+        'flex w-20 rounded-full px-1',
+        theme === 'dark' ? 'justify-start' : 'justify-end',
+      )}
       role="switch"
     >
       <motion.div
